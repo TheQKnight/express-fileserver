@@ -8,6 +8,10 @@ const app = express()
 
 app.use('/', express.static(path.join(__dirname, './public')))
 
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public/index.html'))
+})
+
 try {
   const sslKey = fs.readFileSync(path.join(__dirname, './ssl/key.pem'))
   const sslCert = fs.readFileSync(path.join(__dirname, './ssl/cert.pem'))
