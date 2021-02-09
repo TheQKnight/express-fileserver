@@ -2,3 +2,4 @@
 /ssl/key.pem
 /ssl/cert.pem
 public/*
+!public/README.md
