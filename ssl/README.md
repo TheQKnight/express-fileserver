@@ -1,4 +1,4 @@
-To create a self-signed ssl key pair, type the following into the command line while inside the /ssl directory.
+# To create a self-signed ssl key pair, type the following into the command line while inside the /ssl directory.
 
 Replace COUNTRY, STATE, CITY, COMPANY, IT, URL with your personal details.
 
