@@ -6,9 +6,7 @@ const path = require('path')
 
 const app = express()
 
-const config = JSON.parse(
-  fs.readFileSync(path.join(__dirname, './config.json'))
-)
+const config = JSON.parse(fs.readFileSync(path.join(__dirname, './config.json')))
 
 app.use('/', express.static(path.join(__dirname, './public')))
 
@@ -29,4 +27,4 @@ try {
   }
 }
 http.createServer(app).listen(config.http)
-console.log('HTTP server listening on port 80')
+console.log(`HTTP server listening on port ${config.http}`)
